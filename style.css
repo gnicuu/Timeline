@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    background-image: url(media/FondoRetro.png);
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+    animation: movebg 10s linear infinite;
+    
+}
+
+@keyframes walk {
+    0% { background-position:0 }
+    100% { background-position:-672px }
+  }
+
+
+@keyframes movebg {
+    0% {background-position: 550px;}
+    100% {background-position: 0;}
+};
+
+header {
+    height: 5vh;
+}
+
+header img {
+    width: 10vh;
+    height: auto;
+}
+
+header button {
+    float: right;
+}
+
+
+header button img {
+    height: 3vh;
+    width: 3vh;
+}
+
+h2 {
+    font-size: 2.5vh;
+}
+
+p {
+    font-size: 1.5vh;
+}
+
+.app {
+    display: flex;
+    flex-direction: block;
+    transition: transform 0.5s ease;
+}
+
+
+/* EVENTOS */
+
+.event {
+    width: 100%;
+    height: 90vh;
+    flex: 0 0 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.event header {
+    background-color: rgba(124, 123, 122, 0);
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    font-size: 1.5vh;
+}
+.event section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+}
+
+.div-img {
+    height: 50vh;
+    margin: auto;
+} 
+
+.div-img img {
+    width: 25vh;
+    align-self: center;
+}
+
+.div-description {
+    height: 100%;
+    margin-top: 5px;
+}
+
+.div-description p {
+    display: block;
+    margin: auto;
+    line-height: 12px;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    background-color: rgba(124, 123, 122, 0.699);
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 1.2vh;
+}
+
+/* CONTACTO */
+
+footer {
+    background-image: url(media/wallpaperbetter.jpg);
+    background-color: #0c0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    transition: height 0.3s ease;
+    z-index: 9999;
+    background-position: +100% -10px;
+}
+
+footer button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer button:hover {
+    cursor: pointer;
+}
+
+.expanded {
+    height: 100vh;
+}
+
+.expanded button {
+    height: 100px;
+}
+
+footer h1 {
+    font-size: 5vh;
+}
+
+footer h2 {
+    font-size: 2.5vh;
+    line-height: 10vh;
+}
+
+footer #icono {
+    height: 10vh; 
+}
+
+footer .link {
+    float: right;
+}
+
+footer .zelda {
+    float: left;
+}
+
+/* Botones */
+
+.timeline {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.timeline button {
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    transition: width 0.6s linear;
+    background-color: transparent; 
+    border: none; 
+}
+
+
+.timeline button img {
+    width: 100px; 
+    height: auto; 
+}
+
+
+.timeline button:hover img{
+    width: 120px;
+}
+
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.modal-content h3 {
+    text-align: center;
+    color: green;
+}
+
+.modal-content form {
+    width: 95%;
+    margin: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos del botón */
+.addEvent {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color:#85af38;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+    min-width: 10%;
+}
+
+.addEvent h2 {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+.addEvent:hover {
+    background-color: #0c0;
+}
+
+@media screen and (max-width: 1400px) {
+    .addEvent{
+        padding: 8px 16px; 
+        font-size: 10px; 
+    }
+}
+    
+
+
+/* Estilos del formulario */
+#eventForm {
+    font-family: "Zelda";
+    font-size: 16px;
+    color: #fff;
+}
+
+#eventForm label {
+    color: green;
+    font-family:"Press Start 2P", system-ui;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#eventForm input[type="text"],
+#eventForm input[type="date"],
+#eventForm input[type="url"],
+#eventForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #85af38; /* Color verde similar al del botón */
+    color: #fff;
+}
+
+#eventForm textarea {
+    resize: vertical;
+}
+
+#eventForm button[type="submit"] {
+    background-color: #85af38;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#eventForm button[type="submit"]:hover {
+    background-color: #0c0;
+}
+
+#nombres{
+    white-space: pre-line;
+    text-decoration: underline;
+}
